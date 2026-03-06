@@ -79,8 +79,8 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, rgba(26, 58, 58, 0.6) 0%, rgba(232, 148, 74, 0.4) 100%), 
-                url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1400&fit=crop') center/cover;
+    background: linear-gradient(135deg, rgba(26, 58, 58, 0.3) 0%, rgba(26, 58, 58, 0.5) 100%), 
+                url('./images/jimmy-dean-Qngdf0kgGB4-unsplash.jpg') center/cover;
     background-attachment: fixed;
     color: white;
     padding: 140px 0;
@@ -213,10 +213,11 @@ body {
 }
 
 .floorplan-image {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&fit=crop') center/cover;
     color: white;
     padding: 3rem 2rem;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .floorplan-image h3 {
