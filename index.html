@@ -160,7 +160,7 @@
                         <h2>Enjoy Your Stay with us</h2>
                     </div>
                     
-                    <div class="amenities-grid" id="amenities-card-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto; gap: 2.5rem;">
+                    <div class="amenities-grid" id="amenities-card-grid" style="max-width: 900px; margin: 0 auto;">
                         <!-- Living Spaces -->
                         <div class="amenity-card" id="amenity-card-living">
                             <div class="amenity-card-icon"><i class="fa-solid fa-couch"></i></div>
@@ -271,7 +271,7 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="contact-card" id="contact-details-card">
-                <div class="contact-grid" id="contact-layout-grid" style="grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center;">
+                <div class="contact-grid" id="contact-layout-grid">
                     <div class="contact-info-column" id="contact-info-panel">
                         <div class="contact-header">
                             <span class="section-tag">GET IN TOUCH</span>
@@ -310,7 +310,7 @@
                     </div>
 
                     <!-- Direct Action Buttons Card -->
-                    <div class="contact-form-card" id="contact-actions-panel" style="display: flex; flex-direction: column; gap: 1.5rem; justify-content: center; align-items: stretch; background: var(--light-bg); padding: 3rem; border-radius: 16px; border: 1px solid var(--border-color);">
+                    <div class="contact-form-card" id="contact-actions-panel">
                         <h3 style="font-size: 1.5rem; color: var(--primary-color); text-align: center; margin-bottom: 0.5rem;"><i class="fa-solid fa-circle-info text-accent"></i> Instant Inquiry</h3>
                         <p style="color: var(--text-secondary); text-align: center; margin-bottom: 1.5rem; font-size: 0.95rem;">Connect with our hospitality team instantly via phone or WhatsApp.</p>
                         <a href="tel:+260970209467" class="btn btn-secondary" id="direct-btn-phone" style="width: 100%;"><i class="fa-solid fa-phone"></i> Call Now</a>
@@ -323,9 +323,59 @@
 
     <!-- Footer -->
     <footer class="footer" id="footer-section">
-        <div class="container" style="text-align: center;">
-            <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; color: white;">&copy; 2026 KKI Apartment. All rights reserved.</p>
-            <p style="color: var(--accent-color); font-size: 1.3rem; font-family: 'Playfair Display', serif; font-style: italic;">Enjoy Your Stay</p>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand" style="margin-right: auto;">
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 800; color: white; margin-bottom: 1.2rem; letter-spacing: -0.5px;">KKI <span style="color: var(--accent-color);">Apartment</span></h2>
+                    <p style="color: rgba(255, 255, 255, 0.7); max-width: 340px; font-size: 0.98rem; line-height: 1.7; margin-bottom: 2rem;">A premium sanctuary of absolute comfort, peace, and classic luxury in Meanwood Ndeke, Lusaka. Your ultimate home away from home.</p>
+                    <div class="footer-socials" style="display: flex; gap: 1rem;">
+                        <a href="tel:+260970209467" class="social-circle" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                        <a href="https://wa.me/447780245241" target="_blank" class="social-circle" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="mailto:info@kkiapartment.com" class="social-circle" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 style="font-size: 1rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.8rem; position: relative; padding-bottom: 0.5rem;">
+                        Explore
+                        <span style="position: absolute; bottom: 0; left: 0; width: 30px; height: 2px; background: var(--accent-color);"></span>
+                    </h3>
+                    <ul>
+                        <li><a href="#explore-apartment" onclick="document.getElementById('explore-apartment').scrollIntoView({behavior: 'smooth'}); return false;"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem; margin-right: 8px; color: var(--accent-color);"></i> Find Your Place</a></li>
+                        <li><a href="#explore-apartment" onclick="document.getElementById('explore-apartment').scrollIntoView({behavior: 'smooth'}); return false;"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem; margin-right: 8px; color: var(--accent-color);"></i> Amenities & Comfort</a></li>
+                        <li><a href="#explore-apartment" onclick="document.getElementById('explore-apartment').scrollIntoView({behavior: 'smooth'}); return false;"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem; margin-right: 8px; color: var(--accent-color);"></i> Gallery Portfolio</a></li>
+                        <li><a href="#contact"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem; margin-right: 8px; color: var(--accent-color);"></i> Secure Reservation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3 style="font-size: 1rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.8rem; position: relative; padding-bottom: 0.5rem;">
+                        Location & Info
+                        <span style="position: absolute; bottom: 0; left: 0; width: 30px; height: 2px; background: var(--accent-color);"></span>
+                    </h3>
+                    <ul style="color: rgba(255, 255, 255, 0.7); font-size: 0.98rem; display: flex; flex-direction: column; gap: 1.2rem;">
+                        <li style="display: flex; gap: 12px; align-items: flex-start; line-height: 1.5;">
+                            <i class="fa-solid fa-map-location-dot" style="color: var(--accent-color); margin-top: 3px; font-size: 1.1rem;"></i>
+                            <span>Meanwood Ndeke Phase 1,<br>Lusaka, Zambia</span>
+                        </li>
+                        <li style="display: flex; gap: 12px; align-items: center;">
+                            <i class="fa-solid fa-clock" style="color: var(--accent-color); font-size: 1.1rem;"></i>
+                            <span>24/7 Security & Keyless Entry</span>
+                        </li>
+                        <li style="display: flex; gap: 12px; align-items: center;">
+                            <i class="fa-solid fa-envelope" style="color: var(--accent-color); font-size: 1.1rem;"></i>
+                            <span>contact@kkiapartment.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                <p>&copy; 2026 KKI Apartment. All rights reserved.</p>
+                <p style="color: var(--accent-color); font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
+                    Enjoy Your Stay <i class="fa-solid fa-heart fa-beat" style="color: #f43f5e; font-size: 0.95rem;"></i>
+                </p>
+            </div>
         </div>
     </footer>
 </body>

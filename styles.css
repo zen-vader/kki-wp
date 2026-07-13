@@ -35,6 +35,26 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 90px;
+    font-size: 16px;
+    transition: font-size 0.2s ease;
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 15px; /* Proportional scaling down for tablets & small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px; /* Clean smaller text across the entire page for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 13.5px; /* Further refined sizing for small/narrow phone viewports */
+    }
 }
 
 body {
@@ -1629,9 +1649,14 @@ h1, h2, h3, h4, .font-display {
 
 /* Direct Contact Form */
 .contact-form-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: stretch;
     background: var(--light-bg);
+    padding: 3rem;
     border-radius: 16px;
-    padding: 2.5rem;
     border: 1px solid var(--border-color);
 }
 
@@ -1719,10 +1744,32 @@ h1, h2, h3, h4, .font-display {
 
 /* Footer */
 .footer {
-    background: var(--primary-color);
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.93) 0%, rgba(15, 23, 42, 0.98) 100%), 
+                url('./images/black_family_hero_1783978980728.jpg') center/cover no-repeat;
+    background-attachment: fixed;
     color: white;
     padding: 6rem 0 3rem;
     border-top: 4px solid var(--accent-color);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glassy effect overlay on top of footer background */
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(197, 160, 89, 0.08), transparent 45%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.footer .container {
+    position: relative;
+    z-index: 2;
 }
 
 .footer-top {
@@ -1785,6 +1832,27 @@ h1, h2, h3, h4, .font-display {
     padding-top: 3rem;
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.5);
+}
+
+.social-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-circle:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.4);
+    border-color: var(--accent-color);
 }
 
 /* Animations */
@@ -2011,67 +2079,68 @@ h1, h2, h3, h4, .font-display {
 .explorer-tabs-nav {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 4rem;
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 1.2rem;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 auto 3.5rem;
+    background: #cbd5e1; /* rich, clear contrasting track */
+    padding: 8px;
+    border-radius: 40px; /* pill track shape */
+    box-shadow: inset 0 2px 6px rgba(15, 23, 42, 0.12), 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 2px solid var(--border-color);
+    max-width: max-content;
 }
 
 .explorer-tab-btn {
-    background: none;
-    border: none;
+    background: #f8fafc; /* solid, crisp white/off-white unselected button */
+    border: 1px solid rgba(15, 23, 42, 0.08);
     outline: none;
-    padding: 14px 28px;
-    font-size: 1.15rem;
+    padding: 12px 28px;
+    font-size: 1.02rem;
     font-weight: 700;
-    color: var(--text-secondary);
+    color: var(--primary-color);
     cursor: pointer;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     display: flex;
     align-items: center;
-    gap: 12px;
-    transition: var(--transition);
+    gap: 10px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
-    border-radius: 8px;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(15, 23, 42, 0.05);
 }
 
 .explorer-tab-btn i {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    transition: var(--transition);
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
 }
 
 .explorer-tab-btn::after {
-    content: '';
-    position: absolute;
-    bottom: -21px;
-    left: 0;
-    width: 0;
-    height: 4px;
-    background-color: var(--accent-color);
-    transition: var(--transition);
-    border-radius: 2px;
+    display: none; /* Capsule style doesn't need underlined bar */
 }
 
 .explorer-tab-btn:hover {
     color: var(--primary-color);
+    background-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
 }
 
 .explorer-tab-btn:hover i {
     color: var(--accent-color);
+    transform: scale(1.15);
 }
 
 .explorer-tab-btn.active {
-    color: var(--primary-color);
+    color: white !important;
+    background-color: var(--primary-color) !important; /* Bold Slate selected color */
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.28) !important;
+    transform: scale(1.03);
 }
 
 .explorer-tab-btn.active i {
-    color: var(--accent-color);
-}
-
-.explorer-tab-btn.active::after {
-    width: 100%;
+    color: var(--accent-color) !important;
 }
 
 .explorer-pane {
@@ -2096,15 +2165,158 @@ h1, h2, h3, h4, .font-display {
 
 @media (max-width: 768px) {
     .explorer-tabs-nav {
-        gap: 0.5rem;
+        gap: 0.25rem;
         margin-bottom: 2.5rem;
+        padding: 4px;
+        border-radius: 30px;
     }
     .explorer-tab-btn {
-        padding: 10px 16px;
-        font-size: 0.95rem;
+        padding: 8px 16px;
+        font-size: 0.88rem;
+        border-radius: 20px;
     }
     .explorer-tab-btn::after {
-        bottom: -21px;
+        display: none;
+    }
+    
+    /* Phone Specific Optimizations */
+    .hero {
+        background-attachment: scroll !important; /* Fixes mobile viewport bg rendering lag/zoom issues */
+        padding: 120px 0 80px !important;
+        min-height: auto !important;
+    }
+    
+    .highlights-bar {
+        margin-top: -30px !important;
+        padding: 0 1rem;
+    }
+    
+    .highlights-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.2rem !important;
+        padding: 1.5rem !important;
+    }
+    
+    .highlight-card {
+        border-right: none !important;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 1rem !important;
+        padding-top: 0.5rem !important;
+    }
+    
+    .highlight-card:last-child {
+        border-bottom: none !important;
+        padding-bottom: 0 !important;
+    }
+    
+    .floorplan-details {
+        padding: 1.5rem !important;
+    }
+    
+    #studio-features-list {
+        grid-template-columns: 1fr !important;
+        gap: 0.6rem !important;
+    }
+    
+    .calculator-card {
+        padding: 1.5rem !important;
+    }
+    
+    .calculator-results {
+        padding: 1.5rem !important;
+    }
+    
+    .contact-form-card {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Extra Small Screens (Vertical Phone Screens) */
+@media (max-width: 600px) {
+    /* Touch Swiper for Interactive Explorer Tabs */
+    .explorer-tabs-nav {
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
+        padding-bottom: 0.8rem !important;
+        margin-bottom: 2rem !important;
+        gap: 0.5rem !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important; /* Firefox */
+    }
+    
+    .explorer-tabs-nav::-webkit-scrollbar {
+        display: none !important; /* Chrome, Safari, Opera */
+    }
+    
+    .explorer-tab-btn {
+        flex: 0 0 auto !important;
+        white-space: nowrap !important;
+        padding: 10px 14px !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .explorer-tab-btn::after {
+        bottom: -15px !important;
+    }
+    
+    /* Touch Swiper for Gallery Filter Tabs */
+    .gallery-filter-tabs {
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
+        padding-bottom: 0.8rem !important;
+        margin-bottom: 2rem !important;
+        gap: 0.5rem !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+    }
+    
+    .gallery-filter-tabs::-webkit-scrollbar {
+        display: none !important;
+    }
+    
+    .filter-tab {
+        flex: 0 0 auto !important;
+        white-space: nowrap !important;
+        padding: 8px 16px !important;
+        font-size: 0.85rem !important;
+    }
+    
+    /* Welcome Mini Stats Stack */
+    .welcome-mini-stats {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        margin-top: 2rem !important;
+    }
+    
+    .mini-stat {
+        text-align: center !important;
+        border-left: none !important;
+        border-bottom: 2px solid var(--accent-color) !important;
+        padding-bottom: 0.8rem !important;
+        padding-left: 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.2rem !important;
+    }
+    
+    .hero-content p {
+        font-size: 0.95rem !important;
+    }
+    
+    .hero-actions {
+        flex-direction: column !important;
+        gap: 0.8rem !important;
+        width: 100% !important;
+        padding: 0 1rem !important;
+    }
+    
+    .hero-actions .btn {
+        width: 100% !important;
     }
 }
 
