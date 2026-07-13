@@ -1,0 +1,8 @@
+{
+  "name": "KKI Apartment",
+  "description": "Modern Living in Lusaka - KKI Apartment offers spacious, modern apartments in the heart of Lusaka, close to the international airport.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

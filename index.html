@@ -4,156 +4,328 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KKI Apartment - Modern Living in Lusaka</title>
+    <!-- FontAwesome Icons for Beautiful Representation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <!-- Defer our custom script.js -->
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Navigation Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">KKI Apartment</div>
-            <nav class="nav-links">
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-            </nav>
+    <!-- Floating Glass Header -->
+    <header id="header" class="header">
+        <div class="container" style="justify-content: center;">
+            <a href="#" class="logo-wrapper" id="header-logo">
+                <span class="logo-text" id="header-logo-text">KKI <span>Apartment</span></span>
+            </a>
         </div>
     </header>
 
-    <!-- Hero Section with Image -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>KKI Apartment</h1>
-            <p>YOUR PERFECT HOME AWAY FROM HOME AWAITS</p>
+    <!-- Elevated Hero Section -->
+    <section class="hero" id="hero-section">
+        <div class="hero-content" id="hero-content-wrapper">
+            <span class="hero-tag" id="hero-tagline">PREMIUM LIVING IN LUSAKA</span>
+            <h1 id="hero-title">KKI Apartment</h1>
+            <p id="hero-desc">YOUR PERFECT HOME AWAY FROM HOME AWAITS</p>
+            <div class="hero-actions" id="hero-cta-buttons">
+                <a href="#explore-apartment" class="btn btn-primary" id="hero-btn-primary"><i class="fa-solid fa-eye"></i> Find Your Place</a>
+                <a href="#contact" class="btn btn-outline-white" id="hero-btn-secondary"><i class="fa-solid fa-envelope"></i> Inquire Now</a>
+            </div>
         </div>
+
+        <a href="#welcome" class="scroll-indicator" id="hero-scroll-indicator">
+            <span>Discover More</span>
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </a>
     </section>
+
+    <!-- Floating Highlights Row -->
+    <div class="container highlights-bar" id="floating-highlights">
+        <div class="highlights-grid">
+            <div class="highlight-card" id="highlight-1">
+                <div class="highlight-icon"><i class="fa-solid fa-plane-departure"></i></div>
+                <div class="highlight-info">
+                    <h3>6-10 Min Drive</h3>
+                    <p>To Kenneth Kaunda International Airport</p>
+                </div>
+            </div>
+            <div class="highlight-card" id="highlight-2">
+                <div class="highlight-icon"><i class="fa-solid fa-charging-station"></i></div>
+                <div class="highlight-info">
+                    <h3>24/7 Power</h3>
+                    <p>Uninterrupted Electricity Supply</p>
+                </div>
+            </div>
+            <div class="highlight-card" id="highlight-3">
+                <div class="highlight-icon"><i class="fa-solid fa-wifi"></i></div>
+                <div class="highlight-info">
+                    <h3>High-Speed WiFi</h3>
+                    <p>Complimentary Internet Included</p>
+                </div>
+            </div>
+            <div class="highlight-card" id="highlight-4">
+                <div class="highlight-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="highlight-info">
+                    <h3>24/7 Security</h3>
+                    <p>Guarded Gated Access</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Welcome Section -->
-    <section class="welcome-section">
+    <section id="welcome" class="welcome-section">
         <div class="container">
-            <h2>Welcome to KKI Apartment</h2>
-            <p class="intro-text">KKI Apartment offers spacious, modern apartments in the heart of Lusaka. Located in Meanwood Ndeke Phase 1, just 6-10 minutes from the international airport, our community provides the perfect blend of convenience and luxury.</p>
-            <p class="intro-text">Our open floor plans feature modern appliances, high-speed internet included, 24/7 power supply & security, and secure parking for up to 2 cars. Experience comfortable living in a vibrant environment.</p>
-        </div>
-    </section>
-
-    <!-- Floor Plans Section -->
-    <section id="floorplans" class="floorplans-section">
-        <div class="container">
-            <h2>Find Your Place</h2>
-            
-            <div class="floorplans-grid">
-                <div class="floorplan-card">
-                    <div class="floorplan-image">
-                        <h3>Studio</h3>
-                        <p class="price">K1,250/night</p>
-                    </div>
-                    <div class="floorplan-details">
-                        <h4>Studio Apartment</h4>
-                        <ul>
-                            <li>Living room & kitchen</li>
-                            <li>Modern fixtures</li>
-                            <li>Private bathroom</li>
-                            <li>High-speed internet</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-small">View Details</a>
+            <div class="welcome-grid" id="welcome-content-grid" style="grid-template-columns: 1fr; max-width: 900px; margin: 0 auto; text-align: center;">
+                <div class="welcome-text-side" style="text-align: center;">
+                    <span class="section-tag" id="welcome-tag">WELCOME TO KKI APARTMENT</span>
+                    <h2 id="welcome-title">Welcome to KKI Apartment</h2>
+                    <p class="intro-text" id="welcome-text-1">KKI Apartment offers spacious, modern apartments in the heart of Lusaka. Located in Meanwood Ndeke Phase 1, just 6-10 minutes from the international airport, our community provides the perfect blend of convenience and luxury.</p>
+                    <p class="intro-text" id="welcome-text-2" style="color: var(--text-secondary); font-size: 1.05rem; margin-top: 1rem;">Our open floor plans feature modern appliances, high-speed internet included, 24/7 power supply & security, and secure parking for up to 2 cars. Experience comfortable living in a vibrant environment.</p>
+                    
+                    <div class="welcome-mini-stats" id="welcome-mini-stats-grid" style="justify-content: center; max-width: 500px; margin: 3rem auto 0; gap: 3rem;">
+                        <div class="mini-stat" id="welcome-stat-1" style="text-align: left;">
+                            <div class="mini-stat-num">24/7</div>
+                            <div class="mini-stat-label">Power & Security</div>
+                        </div>
+                        <div class="mini-stat" id="welcome-stat-2" style="text-align: left;">
+                            <div class="mini-stat-num">Up to 2</div>
+                            <div class="mini-stat-label">Secure Parking Cars</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features/Amenities Section -->
-    <section id="amenities" class="amenities-section">
+    <!-- Interactive Explorer Tabs Section -->
+    <section class="explorer-section" id="explore-apartment">
         <div class="container">
-            <h2>Enjoy Your Stay with us</h2>
-            
-            <div class="amenities-grid">
-                <div class="amenity-card">
-                    <h3>🏠 Living Spaces</h3>
-                    <ul>
-                        <li>Modern appliances</li>
-                        <li>Free WiFi</li>
-                        <li>Kitchen</li>
-                        <li>Fully furnished</li>
-                    </ul>
+            <!-- Tabs Navigation -->
+            <div class="explorer-tabs-nav" id="explorer-tabs-nav">
+                <button class="explorer-tab-btn active" data-tab="floorplans-tab-pane">
+                    <i class="fa-solid fa-house-user"></i> Find Your Place
+                </button>
+                <button class="explorer-tab-btn" data-tab="amenities-tab-pane">
+                    <i class="fa-solid fa-couch"></i> Amenities & Comfort
+                </button>
+                <button class="explorer-tab-btn" data-tab="gallery-tab-pane">
+                    <i class="fa-solid fa-images"></i> Gallery
+                </button>
+            </div>
+
+            <!-- Tab Content Panes -->
+            <div class="explorer-tabs-content">
+                <!-- Pane 1: Find Your Place -->
+                <div class="explorer-pane active" id="floorplans-tab-pane">
+                    <div class="section-header" id="floorplans-header" style="margin-bottom: 3rem;">
+                        <span class="section-tag">FIND YOUR PLACE</span>
+                        <h2>Find Your Place</h2>
+                    </div>
+                    
+                    <div class="floorplans-container" style="max-width: 900px; margin: 0 auto;">
+                        <div class="floorplan-card floorplan-card-horizontal" id="studio-apartment-card">
+                            <div class="floorplan-image floorplan-image-studio">
+                                <span class="floorplan-tag">All-Inclusive Luxury</span>
+                                <h3>Studio</h3>
+                                <p class="price">K1,250<span>/night</span></p>
+                            </div>
+                            <div class="floorplan-details">
+                                <div class="details-header" style="margin-bottom: 1.5rem;">
+                                    <span class="section-tag" style="font-size: 0.85rem; margin-bottom: 0.2rem; display: block; letter-spacing: 1px;">PREMIUM SUITE</span>
+                                    <h4 id="studio-card-title" style="font-size: 1.8rem; margin: 0; color: var(--primary-color);">Studio Apartment</h4>
+                                </div>
+                                <div class="floorplan-specs" id="studio-specs" style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color); display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                                    <span><i class="fa-solid fa-bed" style="color: var(--accent-color);"></i> Comfort Bed</span>
+                                    <span><i class="fa-solid fa-bath" style="color: var(--accent-color);"></i> Private Bathroom</span>
+                                    <span><i class="fa-solid fa-wifi" style="color: var(--accent-color);"></i> High-Speed Internet</span>
+                                </div>
+                                <ul id="studio-features-list" style="margin-bottom: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.8rem 1.5rem; padding-left: 0;">
+                                    <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary);"><i class="fa-solid fa-circle-check" style="color: var(--accent-color);"></i> Living room & kitchen</li>
+                                    <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary);"><i class="fa-solid fa-circle-check" style="color: var(--accent-color);"></i> Modern fixtures</li>
+                                    <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary);"><i class="fa-solid fa-circle-check" style="color: var(--accent-color);"></i> Private bathroom</li>
+                                    <li style="display: flex; align-items: center; gap: 10px; color: var(--text-secondary);"><i class="fa-solid fa-circle-check" style="color: var(--accent-color);"></i> High-speed internet</li>
+                                </ul>
+                                <a href="#contact" class="btn btn-secondary btn-small" id="studio-view-details-btn" style="align-self: flex-start; padding: 12px 28px;"><i class="fa-solid fa-calendar-check"></i> View Details</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="amenity-card">
-                    <h3>🔒 Security & Comfort</h3>
-                    <ul>
-                        <li>24/7 power supply</li>
-                        <li>24/7 security</li>
-                        <li>Secure parking</li>
-                    </ul>
+                <!-- Pane 2: Amenities -->
+                <div class="explorer-pane" id="amenities-tab-pane">
+                    <div class="section-header" id="amenities-header" style="margin-bottom: 3rem;">
+                        <span class="section-tag">AMENITIES & COMFORT</span>
+                        <h2>Enjoy Your Stay with us</h2>
+                    </div>
+                    
+                    <div class="amenities-grid" id="amenities-card-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto; gap: 2.5rem;">
+                        <!-- Living Spaces -->
+                        <div class="amenity-card" id="amenity-card-living">
+                            <div class="amenity-card-icon"><i class="fa-solid fa-couch"></i></div>
+                            <h3>🏠 Living Spaces</h3>
+                            <ul>
+                                <li><i class="fa-solid fa-chevron-right"></i> Modern appliances</li>
+                                <li><i class="fa-solid fa-chevron-right"></i> Free WiFi</li>
+                                <li><i class="fa-solid fa-chevron-right"></i> Kitchen</li>
+                                <li><i class="fa-solid fa-chevron-right"></i> Fully furnished</li>
+                            </ul>
+                        </div>
+
+                        <!-- Security & Comfort -->
+                        <div class="amenity-card" id="amenity-card-security">
+                            <div class="amenity-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h3>🔒 Security & Comfort</h3>
+                            <ul>
+                                <li><i class="fa-solid fa-chevron-right"></i> 24/7 power supply</li>
+                                <li><i class="fa-solid fa-chevron-right"></i> 24/7 security</li>
+                                <li><i class="fa-solid fa-chevron-right"></i> Secure parking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pane 3: Gallery -->
+                <div class="explorer-pane" id="gallery-tab-pane">
+                    <div class="section-header" id="gallery-header" style="margin-bottom: 2rem;">
+                        <span class="section-tag">VISUAL GALLERY</span>
+                        <h2>Gallery</h2>
+                        <p class="section-subtitle">Explore our stunning apartment</p>
+                    </div>
+
+                    <div class="gallery-filter-tabs" id="gallery-filters">
+                        <button class="filter-tab active" data-filter="living">Living Room</button>
+                        <button class="filter-tab" data-filter="bedroom">Bedrooms</button>
+                        <button class="filter-tab" data-filter="kitchen">Kitchen</button>
+                        <button class="filter-tab" data-filter="exterior">Exterior & Parking</button>
+                    </div>
+                    
+                    <div class="gallery-grid" id="gallery-photos-grid">
+                        <!-- Item 1 -->
+                        <div class="gallery-item" id="gallery-item-1" data-category="living" onclick="openLightbox(0)">
+                            <img src="https://i.ibb.co/YBJ2DGpt/IMG-20260215-WA0007.jpg" alt="Living Room">
+                            <div class="gallery-overlay">
+                                <h4>Living Room</h4>
+                            </div>
+                            <div class="gallery-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="gallery-item" id="gallery-item-2" data-category="bedroom" onclick="openLightbox(1)">
+                            <img src="https://i.ibb.co/ccbd5fmn/IMG-20260215-WA0006.jpg" alt="Bedroom 1">
+                            <div class="gallery-overlay">
+                                <h4>Bedroom 1</h4>
+                            </div>
+                            <div class="gallery-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="gallery-item" id="gallery-item-3" data-category="kitchen" onclick="openLightbox(2)">
+                            <img src="https://i.ibb.co/BHCDDwP3/IMG-20260215-WA0003.jpg" alt="Kitchen">
+                            <div class="gallery-overlay">
+                                <h4>Kitchen</h4>
+                            </div>
+                            <div class="gallery-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        </div>
+                        <!-- Item 4 -->
+                        <div class="gallery-item" id="gallery-item-4" data-category="living" onclick="openLightbox(3)">
+                            <img src="https://i.ibb.co/q3M8v0hw/IMG-20260215-WA0004.jpg" alt="Furnishing">
+                            <div class="gallery-overlay">
+                                <h4>Furnishing</h4>
+                            </div>
+                            <div class="gallery-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        </div>
+                        <!-- Item 5 -->
+                        <div class="gallery-item" id="gallery-item-5" data-category="exterior" onclick="openLightbox(4)">
+                            <img src="https://i.ibb.co/236pYXHw/IMG-20260215-WA0008.jpg" alt="Parking">
+                            <div class="gallery-overlay">
+                                <h4>Parking</h4>
+                            </div>
+                            <div class="gallery-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        </div>
+                        <!-- Item 6 -->
+                        <div class="gallery-item" id="gallery-item-6" data-category="bedroom" onclick="openLightbox(5)">
+                            <img src="https://i.ibb.co/dwcfCs7h/IMG-20260215-WA0009.jpg" alt="Bedroom 2">
+                            <div class="gallery-overlay">
+                                <h4>Bedroom 2</h4>
+                            </div>
+                            <div class="gallery-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery-section">
-        <div class="container">
-            <h2>Gallery</h2>
-            <p class="section-subtitle">Explore our stunning apartment</p>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://i.ibb.co/YBJ2DGpt/IMG-20260215-WA0007.jpg" alt="Living Room">
-                    <h4>Living Room</h4>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://i.ibb.co/ccbd5fmn/IMG-20260215-WA0006.jpg" alt="Bedroom 1">
-                    <h4>Bedroom 1</h4>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://i.ibb.co/BHCDDwP3/IMG-20260215-WA0003.jpg" alt="Kitchen">
-                    <h4>Kitchen</h4>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://i.ibb.co/q3M8v0hw/IMG-20260215-WA0004.jpg" alt="Furnishing">
-                    <h4>Furnishing</h4>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://i.ibb.co/236pYXHw/IMG-20260215-WA0008.jpg" alt="Parking">
-                    <h4>Parking</h4>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://i.ibb.co/dwcfCs7h/IMG-20260215-WA0009.jpg" alt="Bedroom 2">
-                    <h4>Bedroom 2</h4>
-                </div>
-            </div>
+    <!-- Lightbox Modal Container -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-btn lightbox-prev" onclick="prevLightbox()"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="lightbox-btn lightbox-next" onclick="nextLightbox()"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" class="lightbox-img" src="" alt="View">
+            <div id="lightbox-caption" class="lightbox-caption">Caption Text</div>
         </div>
-    </section>
+    </div>
 
     <!-- Contact/Now Leasing Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2>Ready to Move In?</h2>
-            <p class="section-subtitle">Contact us today to schedule your tour or apply now</p>
-            
-            <div class="contact-content">
-                <div class="contact-info-box">
-                    <h3>📞 Contact Information</h3>
-                    <div class="contact-details">
-                        <p><strong>Phone:</strong> +260 970 209 467</p>
-                        <p><strong>WhatsApp:</strong> +44 778 024 524 10</p>
-                        <p><strong>Location:</strong> Meanwood Ndeke Phase 1, Lusaka</p>
-                    </div>
-                </div>
+            <div class="contact-card" id="contact-details-card">
+                <div class="contact-grid" id="contact-layout-grid" style="grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center;">
+                    <div class="contact-info-column" id="contact-info-panel">
+                        <div class="contact-header">
+                            <span class="section-tag">GET IN TOUCH</span>
+                            <h2>Ready to Move In?</h2>
+                            <p class="section-subtitle" style="text-align: left; margin-bottom: 2rem;">Contact us today to schedule your tour or apply now</p>
+                        </div>
 
-                <div class="contact-actions">
-                    <a href="tel:+260970209467" class="btn btn-primary">Call Now</a>
-                    <a href="https://wa.me/447780245241" class="btn btn-primary">WhatsApp</a>
+                        <div class="contact-methods" id="contact-methods-list">
+                            <!-- Phone -->
+                            <a href="tel:+260970209467" class="method-card" id="contact-method-phone">
+                                <div class="method-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="method-info">
+                                    <h4>Phone</h4>
+                                    <p>+260 970 209 467</p>
+                                </div>
+                            </a>
+
+                            <!-- WhatsApp -->
+                            <a href="https://wa.me/447780245241" target="_blank" class="method-card" id="contact-method-whatsapp">
+                                <div class="method-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                                <div class="method-info">
+                                    <h4>WhatsApp</h4>
+                                    <p>+44 778 024 524 10</p>
+                                </div>
+                            </a>
+
+                            <!-- Location -->
+                            <div class="method-card" id="contact-method-location">
+                                <div class="method-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                                <div class="method-info">
+                                    <h4>Location</h4>
+                                    <p>Meanwood Ndeke Phase 1, Lusaka</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Action Buttons Card -->
+                    <div class="contact-form-card" id="contact-actions-panel" style="display: flex; flex-direction: column; gap: 1.5rem; justify-content: center; align-items: stretch; background: var(--light-bg); padding: 3rem; border-radius: 16px; border: 1px solid var(--border-color);">
+                        <h3 style="font-size: 1.5rem; color: var(--primary-color); text-align: center; margin-bottom: 0.5rem;"><i class="fa-solid fa-circle-info text-accent"></i> Instant Inquiry</h3>
+                        <p style="color: var(--text-secondary); text-align: center; margin-bottom: 1.5rem; font-size: 0.95rem;">Connect with our hospitality team instantly via phone or WhatsApp.</p>
+                        <a href="tel:+260970209467" class="btn btn-secondary" id="direct-btn-phone" style="width: 100%;"><i class="fa-solid fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/447780245241" target="_blank" class="btn btn-primary" id="direct-btn-whatsapp" style="width: 100%;"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 KKI Apartment. All rights reserved.</p>
-            <p>Enjoy Your Stay</p>
+    <footer class="footer" id="footer-section">
+        <div class="container" style="text-align: center;">
+            <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; color: white;">&copy; 2026 KKI Apartment. All rights reserved.</p>
+            <p style="color: var(--accent-color); font-size: 1.3rem; font-family: 'Playfair Display', serif; font-style: italic;">Enjoy Your Stay</p>
         </div>
     </footer>
 </body>
